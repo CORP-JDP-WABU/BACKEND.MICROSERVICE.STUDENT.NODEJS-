@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 
-import * as studentDto from 'src/modules/student/dto'; 
+import * as studentDto from 'src/modules/student/dto';
 
 export class ResponseGenericDto {
   @ApiProperty()

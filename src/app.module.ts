@@ -29,7 +29,7 @@ import { StudentModule } from './modules/student/student.module';
         limit: config.get('http.throttle.limit'),
       }),
     }),
-    StudentModule
+    StudentModule,
   ],
   controllers: [AppController],
   providers: [

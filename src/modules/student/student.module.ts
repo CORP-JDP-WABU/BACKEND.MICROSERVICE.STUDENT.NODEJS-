@@ -7,10 +7,10 @@ import * as services from './services';
 @Module({
   imports: [
     MongooseModule.forFeature([
-        {
-            name: schemas.Students.name,
-            schema: schemas.StudentsSchema,
-        },
+      {
+        name: schemas.Students.name,
+        schema: schemas.StudentsSchema,
+      },
     ]),
   ],
   controllers: [StudentController],

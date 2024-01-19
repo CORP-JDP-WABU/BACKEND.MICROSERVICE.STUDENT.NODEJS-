@@ -14,9 +14,7 @@ import * as exception from 'src/exception';
 @Controller('student/v1.0')
 @ApiTags('STUDENT')
 export class StudentController {
-  constructor(
-    private readonly fnStudentService: services.FnStudentService,
-  ) {}
+  constructor(private readonly fnStudentService: services.FnStudentService) {}
 
   @UseGuards(ThrottlerGuard)
   @Throttle()
@@ -31,7 +29,9 @@ export class StudentController {
   @ApiInternalServerErrorResponse({
     description: 'The find student has been failed by internal error.',
   })
-  findStudentById(@Param("idStudent") idStudent: string): Promise<response.ResponseGenericDto> {
+  findStudentById(
+    @Param('idStudent') idStudent: string,
+  ): Promise<response.ResponseGenericDto> {
     return this.fnStudentService.execute(idStudent, idStudent);
   }
 }

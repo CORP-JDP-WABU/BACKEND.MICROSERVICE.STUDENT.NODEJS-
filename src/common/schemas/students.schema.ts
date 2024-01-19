@@ -23,7 +23,7 @@ export class Students {
 
   @Prop({})
   profileUrl: string;
-  
+
   @Prop(
     raw({
       recoveryPassword: String,

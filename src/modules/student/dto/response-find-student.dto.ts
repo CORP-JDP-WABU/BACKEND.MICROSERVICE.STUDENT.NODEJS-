@@ -1,36 +1,36 @@
-import { ApiProperty } from "@nestjs/swagger";
+import { ApiProperty } from '@nestjs/swagger';
 
 export class ResponseFindStudentDto {
-    @ApiProperty()
-    idStudent: string
+  @ApiProperty()
+  idStudent: string;
 
-    @ApiProperty()
-    firstName: string
+  @ApiProperty()
+  firstName: string;
 
-    @ApiProperty()
-    lastName: string
+  @ApiProperty()
+  lastName: string;
 
-    @ApiProperty()
-    information: string
+  @ApiProperty()
+  information: string;
 
-    @ApiProperty()
-    profileUrl: string
+  @ApiProperty()
+  profileUrl: string;
 
-    @ApiProperty()
-    idUniversity: string
+  @ApiProperty()
+  idUniversity: string;
 
-    @ApiProperty()
-    university: string
+  @ApiProperty()
+  university: string;
 
-    @ApiProperty()
-    idCareer: string
+  @ApiProperty()
+  idCareer: string;
 
-    @ApiProperty()
-    career: string
+  @ApiProperty()
+  career: string;
 
-    @ApiProperty()
-    cicle: string
+  @ApiProperty()
+  cicle: string;
 
-    @ApiProperty()
-    isFirstLogin: boolean
+  @ApiProperty()
+  isFirstLogin: boolean;
 }

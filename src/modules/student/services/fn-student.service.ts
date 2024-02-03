@@ -39,7 +39,7 @@ export class FnStudentService {
         lastName: student.lastName,
         information: student.information,
         profileUrl: student.profileUrl,
-        idCareer: !student.career ? "" : student.career._id.toString(),
+        idCareer: !student.career ? "" : student.career._id,
         career: !student.career ? "" : student.career.name,
         idUniversity: student.university._id.toString(),
         university: student.university.name,

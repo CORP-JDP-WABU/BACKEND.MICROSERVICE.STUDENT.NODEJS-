@@ -17,7 +17,7 @@ export class FnStudentService {
 
   async execute(idStudent: string, token: string) {
     const student = await this.studentModel.findById(idStudent);
-    const result = await this.studenModel.findOne({});
+    const result = await this.studentModel.findOne({});
     this.logger.debug(JSON.stringify(result));
     if (!student) {
       throw new exception.NotExistStudentCustomException();

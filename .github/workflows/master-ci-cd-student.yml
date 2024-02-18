@@ -32,7 +32,7 @@ jobs:
         echo "DATABASE_MONGO_HOSTNAME=${{ secrets.MASTER_ENV_DATABASE_MONGO_HOSTNAME }}" >> .env
         echo "DATABASE_MONGO_USER=${{ secrets.MASTER_ENV_DATABASE_MONGO_USER }}" >> .env
         echo "DATABASE_MONGO_PASSWORD=${{ secrets.MASTER_ENV_DATABASE_MONGO_PASSWORD }}" >> .env
-        echo "DATABASE_MONGO_NAME=${{ secrets.ENV_DATABASE_MONGO_NAME }}" >> .env
+        echo "DATABASE_MONGO_NAME=${{ secrets.MASTER_ENV_DATABASE_MONGO_NAME }}" >> .env
 
     - name: Install Dependencies
       run: npm install

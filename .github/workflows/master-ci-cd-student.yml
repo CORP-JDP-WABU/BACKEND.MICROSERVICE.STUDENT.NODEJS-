@@ -75,5 +75,5 @@ jobs:
           docker rm microservice-student
           docker rmi ${{ secrets.DOCKER_USERNAME }}/master-corp-jdp-wabu-backend-microservice-student-nodejs
           docker pull ${{ secrets.DOCKER_USERNAME }}/master-corp-jdp-wabu-backend-microservice-student-nodejs:latest
-          docker run -d -p 4003:4003 --name microservice-student ${{ secrets.DOCKER_USERNAME }}/master-corp-jdp-wabu-backend-microservice-student-nodejs:latest
+          docker run -d -p 4003:4003 --cpus 0.2 -m 400m --name microservice-student ${{ secrets.DOCKER_USERNAME }}/master-corp-jdp-wabu-backend-microservice-student-nodejs:latest
           '

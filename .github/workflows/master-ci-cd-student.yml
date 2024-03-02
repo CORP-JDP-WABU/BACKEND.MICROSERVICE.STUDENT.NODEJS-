@@ -2,10 +2,10 @@ name: master-ci-cd-student
 
 on:
   push:
-    branches: [master]
+    branches: [release/v3.0.0]
     
   pull_request:
-    branches: [master]
+    branches: [release/v3.0.0]
 
 jobs:
   build_and_push:
@@ -75,5 +75,5 @@ jobs:
           docker rm microservice-student
           docker rmi ${{ secrets.DOCKER_USERNAME }}/master-corp-jdp-wabu-backend-microservice-student-nodejs
           docker pull ${{ secrets.DOCKER_USERNAME }}/master-corp-jdp-wabu-backend-microservice-student-nodejs:latest
-          docker run -d -p 4003:4003 --cpus 0.2 -m 400m --name microservice-student ${{ secrets.DOCKER_USERNAME }}/master-corp-jdp-wabu-backend-microservice-student-nodejs:latest
+          docker run -d -p 4003:4003 --cpus 0.2 -m 400m --name microservice-student --net=microservices_network --ip=172.18.0.5 ${{ secrets.DOCKER_USERNAME }}/master-corp-jdp-wabu-backend-microservice-student-nodejs:latest
           '
